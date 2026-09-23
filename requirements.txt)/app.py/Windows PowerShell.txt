@@ -1,0 +1,320 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> from datetime import datetime
+At line:1 char:1
++ from datetime import datetime
++ ~~~~
+The 'from' keyword is not supported in this version of the language.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ReservedKeywordNotAllowed
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> import pandas as pd
+import : The term 'import' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ import pandas as pd
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (import:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> import streamlit as st
+import : The term 'import' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ import streamlit as st
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (import:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> # Setări vizuale pentru pagină (Stil The Void Terminal)
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> st.set_page_config(
+>>     page_title="THE VOID TERMINAL", page_icon="⚡", layout="centered"
+>> )
+At line:2 char:35
++     page_title="THE VOID TERMINAL", page_icon="⚡", layout="centered"
++                                   ~
+Missing argument in parameter list.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingArgument
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> # Design CSS personalizat (Onyx Black & Neon Purple)
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> st.markdown(
+>>     """
+>>     <style>
+>>     .stApp {
+>>         background-color: #09090B;
+>>         color: #E4E4E7;
+>>     }
+>>     h1, h2, h3 {
+>>         color: #9333EA !important;
+>>         font-family: monospace;
+>>     }
+>>     .stFileUploader {
+>>         background-color: #13101E;
+>>         border: 1px solid #9333EA;
+>>         padding: 20px;
+>>         border-radius: 8px;
+>>     }
+>>     </style>
+>> """,
+>>     unsafe_allow_html=True,
+>> )
+At line:19 char:5
++ """,
++     ~
+Missing expression after ','.
+At line:20 char:5
++     unsafe_allow_html=True,
++     ~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'unsafe_allow_html=True' in expression or statement.
+At line:19 char:5
++ """,
++     ~
+Missing closing ')' in expression.
+At line:20 char:28
++     unsafe_allow_html=True,
++                            ~
+Missing expression after ',' in pipeline element.
+At line:21 char:1
++ )
++ ~
+Unexpected token ')' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterToken
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> st.title("THE VOID TERMINAL // v4.2")
+st.title : The term 'st.title' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ st.title("THE VOID TERMINAL // v4.2")
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (st.title:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> st.subheader("VAULT // Import Trade History")
+st.subheader : The term 'st.subheader' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ st.subheader("VAULT // Import Trade History")
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (st.subheader:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> st.write(
+>>     "Încarcă jurnalul tău de tranzacții în format CSV pentru a calcula edge-ul"
+>>     " și riscul."
+At line:2 char:80
++ ... că jurnalul tău de tranzacții în format CSV pentru a calcula edge-ul"
++                                                                          ~
+Missing closing ')' in expression.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInExpression
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> )
+At line:1 char:1
++ )
++ ~
+Unexpected token ')' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> # Zona de upload fișier
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> uploaded_file = st.file_uploader("Trage fișierul CSV aici", type=["csv"])
+At line:1 char:60
++ uploaded_file = st.file_uploader("Trage fișierul CSV aici", type=["cs ...
++                                                            ~
+Missing expression after ','.
+At line:1 char:61
++ ... aded_file = st.file_uploader("Trage fișierul CSV aici", type=["csv"])
++                                                             ~~~~~~~~~~~~
+Unexpected token 'type=["csv"]' in expression or statement.
+At line:1 char:60
++ uploaded_file = st.file_uploader("Trage fișierul CSV aici", type=["cs ...
++                                                            ~
+Missing closing ')' in expression.
+At line:1 char:73
++ ... aded_file = st.file_uploader("Trage fișierul CSV aici", type=["csv"])
++                                                                         ~
+Unexpected token ')' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterToken
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py> if uploaded_file is not None:
+At line:1 char:3
++ if uploaded_file is not None:
++   ~
+Missing '(' after 'if' in if statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingOpenParenthesisInIfStatement
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>   try:
+try: : The term 'try:' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:3
++   try:
++   ~~~~
+    + CategoryInfo          : ObjectNotFound: (try::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>     df = pd.read_csv(uploaded_file)
+uploaded_file : The term 'uploaded_file' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:22
++     df = pd.read_csv(uploaded_file)
++                      ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (uploaded_file:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>     st.success("Fișier încărcat cu succes în motorul Vault!")
+st.success : The term 'st.success' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:5
++     st.success("Fișier încărcat cu succes în motorul Vault!")
++     ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (st.success:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>     st.write("### 📊 Previzualizare Tranzacții:")
+st.write : The term 'st.write' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:5
++     st.write("### 📊 Previzualizare Tranzacții:")
++     ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (st.write:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>     st.dataframe(df)
+df : The term 'df' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:18
++     st.dataframe(df)
++                  ~~
+    + CategoryInfo          : ObjectNotFound: (df:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>     if st.button("RULEAZĂ ANALIZA DE RISC"):
+At line:1 char:7
++     if st.button("RULEAZĂ ANALIZA DE RISC"):
++       ~
+Missing '(' after 'if' in if statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingOpenParenthesisInIfStatement
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>       # Calcul simplu demonstrativ pentru PnL total
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>       if "PnL" in df.columns:
+At line:1 char:9
++       if "PnL" in df.columns:
++         ~
+Missing '(' after 'if' in if statement.
+At line:1 char:16
++       if "PnL" in df.columns:
++                ~~
+Unexpected token 'in' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingOpenParenthesisInIfStatement
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>         total_pnl = df["PnL"].sum()
+At line:1 char:35
++         total_pnl = df["PnL"].sum()
++                                   ~
+An expression was expected after '('.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedExpression
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>         winning_trades = len(df[df["PnL"] > 0])
+df[df[PnL] : The term 'df[df[PnL]' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:30
++         winning_trades = len(df[df["PnL"] > 0])
++                              ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (df[df[PnL]:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>         losing_trades = len(df[df["PnL"] < 0])
+At line:1 char:42
++         losing_trades = len(df[df["PnL"] < 0])
++                                          ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>         st.markdown(f"### 📈 Rezultate Anexe:")
+f### 📈 Rezultate Anexe: : The term 'f### 📈 Rezultate Anexe:' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is
+correct and try again.
+At line:1 char:21
++         st.markdown(f"### 📈 Rezultate Anexe:")
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (f### 📈 Rezultate Anexe::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>         st.write(f"**PnL Total:** ${total_pnl:.2f}")
+f**PnL Total:** ${total_pnl:.2f} : The term 'f**PnL Total:** ${total_pnl:.2f}' is not recognized as the name of a
+cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify
+that the path is correct and try again.
+At line:1 char:18
++         st.write(f"**PnL Total:** ${total_pnl:.2f}")
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (f**PnL Total:** ${total_pnl:.2f}:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>         st.write(f"**Tranzacții Câștigătoare:** {winning_trades}")
+f**Tranzacții Câștigătoare:** {winning_trades} : The term 'f**Tranzacții Câștigătoare:** {winning_trades}' is not
+recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:18
++         st.write(f"**Tranzacții Câștigătoare:** {winning_trades}")
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (f**Tranzacții C...winning_trades}:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>         st.write(f"**Tranzacții Pierzătoare:** {losing_trades}")
+f**Tranzacții Pierzătoare:** {losing_trades} : The term 'f**Tranzacții Pierzătoare:** {losing_trades}' is not
+recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:18
++         st.write(f"**Tranzacții Pierzătoare:** {losing_trades}")
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (f**Tranzacții P...{losing_trades}:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>       else:
+else: : The term 'else:' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:7
++       else:
++       ~~~~~
+    + CategoryInfo          : ObjectNotFound: (else::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>         st.warning(
+>>             "Coloana 'PnL' nu a fost găsită automat în fișierul tău."
+>>         )
+st.warning : The term 'st.warning' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:9
++         st.warning(
++         ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (st.warning:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>   except Exception as e:
+except : The term 'except' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:3
++   except Exception as e:
++   ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (except:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Lenovo\OneDrive\Desktop\app.py>     st.error(f"Eroare la procesarea fișierului: {e}")
